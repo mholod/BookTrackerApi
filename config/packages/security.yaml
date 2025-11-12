@@ -31,17 +31,26 @@ security:
             success_handler: lexik_jwt_authentication.handler.authentication_success
             failure_handler: lexik_jwt_authentication.handler.authentication_failure
 
+        api_token_refresh:
+          pattern: ^/v1/auth/token-refresh
+          provider: app_user_provider_uuid
+          refresh_jwt: ~
+
         api:
           provider: app_user_provider
           pattern: ^/api
           stateless: true
           jwt: ~
+          logout:
+            path: api_token_invalidate
 
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
       - { path: ^/api/auth/login, roles: PUBLIC_ACCESS }
       - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+      - { path: ^/api/auth/token-refresh, roles: PUBLIC_ACCESS }
+
 
 #when@test:
 #    security:

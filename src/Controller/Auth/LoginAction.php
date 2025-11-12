@@ -14,6 +14,7 @@ class LoginAction extends AbstractController
     #[Route('/api/auth/login', name: 'api.auth.login')]
     public function login(): never
     {
+        // Symfony intercepts this automatically based on firewall configuration.
         throw new \LogicException('This method is intercepted by Symfony during logout.');
     }
 }
