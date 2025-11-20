@@ -3,6 +3,9 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+    prefix: /api
+    defaults:
+      _format: json
 
 api_refresh_token:
   path: /api/token/token-refresh

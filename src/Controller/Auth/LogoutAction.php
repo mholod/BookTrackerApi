@@ -11,7 +11,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class LogoutAction extends AbstractController
 {
-    #[Route('/api/auth/logout', name: 'api.auth.logout')]
+    #[Route('/auth/logout', name: 'api.auth.logout')]
     public function logout(): never
     {
         // Symfony intercepts this automatically based on firewall configuration.

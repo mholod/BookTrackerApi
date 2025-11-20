@@ -11,7 +11,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class TokenRefreshAction extends AbstractController
 {
-    #[Route('/api/auth/token-refresh', name: 'api.auth.token-refresh')]
+    #[Route('/auth/token-refresh', name: 'api.auth.token-refresh')]
     public function logout(): never
     {
         // Symfony intercepts this automatically based on firewall configuration.

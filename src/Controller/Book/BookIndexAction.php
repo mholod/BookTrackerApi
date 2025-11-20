@@ -18,7 +18,7 @@ class BookIndexAction extends AbstractController
     ) {
     }
 
-    #[Route(path: '/api/books', name: 'book.index', methods: [Request::METHOD_GET])]
+    #[Route(path: '/books', name: 'book.index', methods: [Request::METHOD_GET])]
     public function __invoke(): Output
     {
         /** @var User $user */

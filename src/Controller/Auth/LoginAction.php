@@ -11,7 +11,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class LoginAction extends AbstractController
 {
-    #[Route('/api/auth/login', name: 'api.auth.login')]
+    #[Route('/auth/login', name: 'api.auth.login')]
     public function login(): never
     {
         // Symfony intercepts this automatically based on firewall configuration.

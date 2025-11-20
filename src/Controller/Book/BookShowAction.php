@@ -17,7 +17,7 @@ class BookShowAction
     ) {
     }
 
-    #[Route('/api/books/{bookId}', name: 'book.show', methods: [Request::METHOD_GET])]
+    #[Route('/books/{bookId}', name: 'book.show', methods: [Request::METHOD_GET])]
     public function __invoke(UuidInterface $bookId): Output
     {
         $book = $this->bookService->getBookById($bookId);

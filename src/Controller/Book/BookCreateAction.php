@@ -20,7 +20,7 @@ class BookCreateAction extends AbstractController
     {
     }
 
-    #[Route('/api/books', name: 'book.create', methods: [Request::METHOD_POST])]
+    #[Route('/books', name: 'book.create', methods: [Request::METHOD_POST])]
     public function __invoke(#[MapRequestPayload] CreateBookDTO $input): Output
     {
         /** @var User $user */
