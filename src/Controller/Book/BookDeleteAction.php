@@ -19,7 +19,7 @@ class BookDeleteAction extends AbstractController
     {
     }
 
-    #[Route('/books/{bookId}/delete', name: 'book.delete', methods: [Request::METHOD_DELETE])]
+    #[Route('/books/{bookId}', name: 'book.delete', methods: [Request::METHOD_DELETE])]
     public function __invoke(UuidInterface $bookId): Output
     {
         /** @var User $user */

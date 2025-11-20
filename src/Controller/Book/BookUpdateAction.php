@@ -20,7 +20,7 @@ class BookUpdateAction extends AbstractController
     {
     }
 
-    #[Route('/books/{bookId}/edit', name: 'book.edit', methods: [Request::METHOD_PATCH])]
+    #[Route('/books/{bookId}', name: 'book.edit', methods: [Request::METHOD_PATCH])]
     public function __invoke(UuidInterface $bookId, #[MapRequestPayload] UpdateBookDTO $input): Output
     {
         /** @var \App\Entity\User $user */
