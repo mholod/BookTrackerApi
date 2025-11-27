@@ -3,6 +3,6 @@ gesdinet_jwt_refresh_token:
     ttl: 2592000
     user_identity_field: username
     token_parameter_name: refresh_token
-    single_use: true
+    single_use: false
     return_expiration: true
     return_expiration_parameter_name: expires_in
